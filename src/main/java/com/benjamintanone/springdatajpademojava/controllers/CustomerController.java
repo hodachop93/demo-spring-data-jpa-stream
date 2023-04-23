@@ -51,6 +51,7 @@ public class CustomerController {
             .forEach(entityManager::detach); // optional, but objects _may_ not be GC'd if you don't detach them first.
         printWriter.flush();
         printWriter.close();
+        customerStream.close();
     }
 
     @GetMapping("/customers_fragment.csv")
