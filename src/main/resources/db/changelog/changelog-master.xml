@@ -7,4 +7,7 @@
     <changeSet author="verzac" id="1">
         <sqlFile relativeToChangelogFile="true" path="changelog-master.sql" stripComments="true" splitStatements="true" />
     </changeSet>
+    <changeSet author="hho" id="2">
+        <sqlFile relativeToChangelogFile="true" path="create-campaign.sql" stripComments="true" splitStatements="true" />
+    </changeSet>
 </databaseChangeLog>

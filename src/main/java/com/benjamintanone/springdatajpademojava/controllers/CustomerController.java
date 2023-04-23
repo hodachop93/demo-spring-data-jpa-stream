@@ -1,9 +1,9 @@
 package com.benjamintanone.springdatajpademojava.controllers;
 
 import com.benjamintanone.springdatajpademojava.domain.Customer;
+import com.benjamintanone.springdatajpademojava.repositories.CampaignRepository;
 import com.benjamintanone.springdatajpademojava.repositories.CustomerRepository;
 import com.benjamintanone.springdatajpademojava.specifications.CustomerSpecification;
-import org.aspectj.weaver.patterns.HasThisTypePatternTriedToSneakInSomeGenericOrParameterizedTypePatternMatchingStuffAnywhereVisitor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -25,6 +25,9 @@ import java.util.stream.StreamSupport;
 public class CustomerController {
     @Autowired
     private CustomerRepository customerRepository;
+
+    @Autowired
+    private CampaignRepository campaignRepository;
 
     @Autowired
     private EntityManager entityManager;
